@@ -42,12 +42,12 @@
   name: (identifier) @AlabasterDefinition)
 
 (for_expression
-  "in" @AlabasterPunctuation)
+  "in" @AlabasterPunct)
 (type_arguments
-  "<" @AlabasterPunctuation)
+  "<" @AlabasterPunct)
 (type_arguments
-  ">" @AlabasterPunctuation)
+  ">" @AlabasterPunct)
 (type_parameters
-  "<" @AlabasterPunctuation)
+  "<" @AlabasterPunct)
 (type_parameters
-  ">" @AlabasterPunctuation)
+  ">" @AlabasterPunct)

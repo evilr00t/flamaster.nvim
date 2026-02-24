@@ -1,12 +1,12 @@
 local colors
 if vim.o.background == "dark" then
     colors = {
-        color1 = "#162022",
-        color2 = "#cd974b",
-        color3 = "#cecece",
-        color4 = "#9F9F9F",
-        color5 = "#333333",
-        color6 = "#cc8bc9",
+        color1 = "#16161e", -- statusline bg (Tokyo Night)
+        color2 = "#e0af68", -- replace accent (yellow)
+        color3 = "#c0caf5", -- active fg
+        color4 = "#737aa2", -- inactive fg
+        color5 = "#414868", -- normal a bg (dark grey)
+        color6 = "#bb9af7", -- visual accent (magenta)
     }
 else
     colors = {
