@@ -17,8 +17,7 @@
 (unsigned_literal) @AlabasterConstant
 (real_literal) @AlabasterConstant
 
-(line_comment) @AlabasterHashbang
+(line_comment) @Comment
 (multiline_comment) @Comment
 
-
-(modifiers (annotation (user_type (type_identifier) @AlabasterPunctuation)))
+(modifiers (annotation (user_type (type_identifier) @AlabasterPunct)))

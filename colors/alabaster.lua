@@ -47,7 +47,7 @@ if vim.o.background == "dark" then
         bg = "#2d202f",
     }
     local error = "#db4b4b"
-    local warn = "#e0af68"
+    local warn = "#ff9e64"
     local hint = "#7dcfff"
     local info = "#9ece6a"
     local ansi = {
@@ -199,7 +199,7 @@ if vim.o.background == "dark" then
         DiagnosticHint = { fg = hint },
         DiagnosticInfo = { fg = info },
         DiagnosticVirtualTextError = { bg = "#2d1b1e", fg = "#f7768e" },
-        DiagnosticVirtualTextWarn = { bg = "#2d2208", fg = "#e0af68" },
+        DiagnosticVirtualTextWarn = { bg = "#2d2208", fg = warn },
         DiagnosticVirtualTextHint = { bg = "#1a2535", fg = "#7dcfff" },
         DiagnosticVirtualTextInfo = { bg = "#1a2a1a", fg = "#9ece6a" },
 
@@ -252,7 +252,7 @@ if vim.o.background == "dark" then
         ["@function.macro"] = { fg = ansi.white },
         ["@keyword"] = { fg = ansi.white },
         ["@keyword.function"] = { fg = ansi.white },
-        ["@keyword.operator"] = { fg = punct_fg },
+        ["@keyword.operator"] = { fg = ansi.white },
         ["@label"] = { fg = ansi.white },
         ["@method"] = { fg = ansi.white },
         ["@module"] = { fg = ansi.white },
