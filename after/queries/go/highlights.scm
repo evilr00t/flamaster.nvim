@@ -26,3 +26,22 @@
   (iota)
   (nil)
 ] @FlamasterConstant
+
+; Var block declarations (parallel to const)
+(var_declaration
+  (var_spec
+    name: (identifier) @FlamasterDefinition))
+
+; Interface method specs
+(interface_type
+  (method_spec
+    name: (field_identifier) @FlamasterDefinition))
+
+; Struct field tags (backtick strings like `json:"name"`)
+(field_declaration
+  tag: (raw_string_literal) @FlamasterConstant)
+
+; Short variable declarations (:=) — LHS names
+(short_var_declaration
+  left: (expression_list
+    (identifier) @FlamasterDefinition))

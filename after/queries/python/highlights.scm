@@ -37,3 +37,19 @@
 ; Shebang line
 ((module . (comment) @FlamasterHashbang)
  (#match? @FlamasterHashbang "^#!/"))
+
+; Type alias (PEP 695, Python 3.12+)
+(type_alias_statement
+  name: (type
+    (identifier) @FlamasterDefinition))
+
+; __all__ exports list
+(assignment
+  left: (identifier) @FlamasterDefinition
+  (#eq? @FlamasterDefinition "__all__"))
+
+; Exception handler variable (except ValueError as e:)
+(except_clause
+  (as_pattern
+    alias: (as_pattern_target
+      (identifier) @FlamasterDefinition)))

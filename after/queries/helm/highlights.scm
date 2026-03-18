@@ -16,3 +16,16 @@
 ; Template function definitions
 (function_declaration
   name: (identifier) @FlamasterDefinition)
+
+; Template action names (define/template/block)
+(template
+  name: (interpreted_string_literal) @FlamasterDefinition)
+
+; Pipeline function calls
+(function_call
+  function: (identifier) @FlamasterBase)
+
+; Pipeline function calls that are constructors/generators
+(function_call
+  function: (identifier) @FlamasterConstant
+  (#any-of? @FlamasterConstant "include" "required" "default" "empty" "fail" "print" "printf" "println"))

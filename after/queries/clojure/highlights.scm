@@ -53,3 +53,30 @@
 ; Also as map keys (the most common use)
 (map_lit
   key: (kwd_lit) @FlamasterConstant)
+
+; defmethod dispatch value and method name
+(list_lit
+  value: (sym_lit) @_kw
+  (#eq? @_kw "defmethod")
+  value: (sym_lit) @FlamasterDefinition)
+
+; extend-type / extend-protocol — type name is a definition
+(list_lit
+  value: (sym_lit) @_kw
+  (#any-of? @_kw "extend-type" "extend-protocol")
+  value: (sym_lit) @FlamasterDefinition)
+
+; letfn bindings
+(list_lit
+  value: (sym_lit) @_kw
+  (#eq? @_kw "letfn")
+  value: (vec_lit
+    (list_lit
+      value: (sym_lit) @FlamasterDefinition
+      value: (vec_lit))))
+
+; reify/proxy — interface names are constants
+(list_lit
+  value: (sym_lit) @_kw
+  (#any-of? @_kw "reify" "proxy")
+  value: (sym_lit) @FlamasterConstant)

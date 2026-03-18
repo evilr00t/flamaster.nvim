@@ -28,9 +28,12 @@ Additionally:
 - Flamaster only highlights things that the parser can identify reliably. Partial or unreliable highlighting trains your brain to second-guess itself.
 
 ## NOTE
-This is designed with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) in mind. There is some fallback highlighting for the built-in highlight groups, but the intended use is with treesitter. **nvim-treesitter is an unstable plugin that may introduce breaking changes at any time. Queries for many languages are bundled.** Please contribute queries if you can, following [these rules](https://github.com/tonsky/sublime-scheme-flamaster#motivation).
+This is designed with Neovim's built-in treesitter highlighting in mind (`nvim-treesitter` is optional but recommended for parser management). There is some fallback highlighting for the built-in highlight groups, but the intended use is with treesitter. **Queries for many languages are bundled.** Please contribute queries if you can, following [these rules](https://github.com/tonsky/sublime-scheme-flamaster#motivation).
 
 ## Usage
+
+> **Requires Neovim 0.10+** (uses modern `@` capture groups; legacy `TS*` highlight groups have been removed).
+
 ```vim
 set termguicolors
 colorscheme flamaster
@@ -58,26 +61,28 @@ Bundled query overrides for:
 | Bash | Function definitions, shebangs |
 | C / C++ | Function declarators, type definitions, structs, enums |
 | C# | Types, constructors, methods, properties, namespaces |
-| Clojure | `defn`/`defmacro`/`defprotocol`/`defrecord`/`def` names, `ns` declarations, keywords |
+| Clojure | `defn`/`defmacro`/`defprotocol`/`defrecord`/`def`/`defmethod` names, `ns` declarations, keywords; `extend-type`/`extend-protocol`, `letfn`, `reify`/`proxy` |
 | Common Lisp | Function definitions |
+| Dockerfile | `FROM` image/alias, `ENV`/`ARG`/`LABEL` as definitions, `EXPOSE` as constants |
 | Elm | Type and function annotations |
 | Fennel | Macro definitions |
 | Fish | Function definitions, global variable assignments, shebangs |
-| Go | Package, function, method, type (`struct`/`interface`/alias), const declarations; `iota`/`nil` as constants |
+| Go | Package, function, method, type (`struct`/`interface`/alias), const/var declarations; `iota`/`nil` as constants; interface method specs, struct field tags, short variable declarations |
 | HCL | Block labels, attribute keys, function calls |
 | Hare | Function and type declarations |
-| Helm | Extends YAML; `Values`/`Chart`/`Release`/`Capabilities` as constants |
+| Helm | Extends YAML; `Values`/`Chart`/`Release`/`Capabilities` as constants; template action names, pipeline functions |
 | Java | Classes, constructors, methods, packages |
 | JavaScript | Function declarations, arrow functions |
 | JSON | Object keys |
 | Kotlin | Functions, classes, literals; annotations as punctuation |
 | Lua | Function declarations and assignments, table field names |
 | Make | Target names, variable assignment names, automatic variables |
-| Python | Functions, classes, decorators; `None`/`True`/`False` as constants; shebangs |
+| Python | Functions, classes, decorators; `None`/`True`/`False` as constants; shebangs; type aliases (PEP 695), `__all__` exports, exception handler variables |
 | Ruby | Methods, classes, modules, symbols, instance variables |
 | Rust | Functions, structs, enums, traits, impls, macros; generic angle brackets as punctuation |
 | Scala | Functions, classes, objects, traits, packages |
-| Terraform | Extends HCL; `var`/`local`/`module`/`data` namespaces and type keywords as constants |
+| Terraform | Extends HCL; `var`/`local`/`module`/`data` namespaces and type keywords as constants; `moved`/`import`/`check` blocks, `lifecycle` inner block keywords |
+| TOML | Table/array table headers as definitions, dotted keys, top-level pair keys |
 | TypeScript | Interfaces, methods, functions, type aliases |
 | Vim script | Function definitions |
 | YAML | Mapping keys as definitions; anchors, aliases, tags as constants |
@@ -100,6 +105,9 @@ Bundled query overrides for:
 - [mizlan/iswap.nvim](https://github.com/mizlan/iswap.nvim) — use `ISwapSnipe` for `hl_snipe` and `ISwapGrey` for `hl_grey`
 - [kristijanhusak/vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)
 - [mfussenegger/nvim-dap](https://github.com/mfussenegger/nvim-dap) (via nvim-dap-virtual-text)
+- [folke/snacks.nvim](https://github.com/folke/snacks.nvim) (dashboard, notifier, indent)
+- [saghen/blink.cmp](https://github.com/saghen/blink.cmp)
+- [MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 
 ## Screenshots
 

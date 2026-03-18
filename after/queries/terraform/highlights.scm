@@ -44,3 +44,45 @@
     (#any-of? @_kw "variable" "output" "locals" "provider")
     (string_lit
       (template_literal) @FlamasterDefinition)))
+
+; moved block — from/to addresses
+(body
+  (block
+    (identifier) @_kw
+    (#eq? @_kw "moved")
+    (body
+      (attribute
+        (identifier) @_attr
+        (#any-of? @_attr "from" "to")
+        (expression) @FlamasterConstant))))
+
+; import block — id and to attributes
+(body
+  (block
+    (identifier) @_kw
+    (#eq? @_kw "import")
+    (body
+      (attribute
+        (identifier) @_attr
+        (#eq? @_attr "to")
+        (expression) @FlamasterConstant))))
+
+; check block with custom conditions
+(body
+  (block
+    (identifier) @_kw
+    (#eq? @_kw "check")
+    (string_lit
+      (template_literal) @FlamasterDefinition)))
+
+; lifecycle inner block keywords
+(body
+  (block
+    (identifier) @_kw
+    (#eq? @_kw "lifecycle")
+    (body
+      (attribute
+        (identifier) @FlamasterConstant
+        (#any-of? @FlamasterConstant
+          "create_before_destroy" "prevent_destroy" "ignore_changes"
+          "replace_triggered_by" "precondition" "postcondition")))))
