@@ -4,27 +4,27 @@
 ; Target names are definitions (the "function name" of a rule)
 (rule
   (targets
-    (word) @AlabasterDefinition))
+    (word) @FlamasterDefinition))
 
 ; Variable assignment names are definitions
 (variable_assignment
-  name: (word) @AlabasterDefinition)
+  name: (word) @FlamasterDefinition)
 
 (shell_assignment
-  name: (word) @AlabasterDefinition)
+  name: (word) @FlamasterDefinition)
 
 (define_directive
-  name: (word) @AlabasterDefinition)
+  name: (word) @FlamasterDefinition)
 
 ; Variable references inside recipes/values are base text
 (variable_reference
-  (word) @AlabasterBase)
+  (word) @FlamasterBase)
 
 ; Built-in automatic variable characters stand out as constants
 (automatic_variable
-  _ @AlabasterConstant
+  _ @FlamasterConstant
   (#set! priority 106))
 
 ; Shebang-style comments in recipe lines
-((comment) @AlabasterHashbang
- (#match? @AlabasterHashbang "^#!/"))
+((comment) @FlamasterHashbang
+ (#match? @FlamasterHashbang "^#!/"))

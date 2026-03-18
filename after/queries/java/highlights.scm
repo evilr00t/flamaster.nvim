@@ -2,10 +2,10 @@
 ;; extends
 
 (class_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (constructor_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (method_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (package_declaration
-  (scoped_identifier) @AlabasterDefinition)
+  (scoped_identifier) @FlamasterDefinition)

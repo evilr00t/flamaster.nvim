@@ -2,14 +2,14 @@
 ;; extends
 
 (function_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (variable_declarator
-  name: (identifier) @AlabasterDefinition
+  name: (identifier) @FlamasterDefinition
   value: (arrow_function))
 
 (variable_declarator
-  name: (identifier) @AlabasterDefinition
+  name: (identifier) @FlamasterDefinition
   value: (function_expression))
 
-(undefined) @AlabasterConstant
+(undefined) @FlamasterConstant

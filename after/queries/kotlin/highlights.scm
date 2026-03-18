@@ -1,23 +1,23 @@
 ;; vim: ft=query
 ;; extends
 (function_declaration
-  (simple_identifier) @AlabasterDefinition)
+  (simple_identifier) @FlamasterDefinition)
 
 (class_declaration
-  (type_identifier) @AlabasterDefinition)
+  (type_identifier) @FlamasterDefinition)
 
 (object_declaration
-  (type_identifier) @AlabasterDefinition)
+  (type_identifier) @FlamasterDefinition)
 
-(string_literal) @AlabasterString
+(string_literal) @FlamasterString
 
-(boolean_literal) @AlabasterConstant
-(integer_literal) @AlabasterConstant
-(long_literal) @AlabasterConstant
-(unsigned_literal) @AlabasterConstant
-(real_literal) @AlabasterConstant
+(boolean_literal) @FlamasterConstant
+(integer_literal) @FlamasterConstant
+(long_literal) @FlamasterConstant
+(unsigned_literal) @FlamasterConstant
+(real_literal) @FlamasterConstant
 
 (line_comment) @Comment
 (multiline_comment) @Comment
 
-(modifiers (annotation (user_type (type_identifier) @AlabasterPunct)))
+(modifiers (annotation (user_type (type_identifier) @FlamasterPunct)))

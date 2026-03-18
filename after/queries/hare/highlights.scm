@@ -2,7 +2,7 @@
 ;; extends
 
 (function_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (type_declaration
-  (identifier) @AlabasterDefinition)
+  (identifier) @FlamasterDefinition)

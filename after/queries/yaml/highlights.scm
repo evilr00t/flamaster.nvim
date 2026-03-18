@@ -5,21 +5,21 @@
 (block_mapping_pair
   key: (flow_node
     (plain_scalar
-      (string_scalar) @AlabasterDefinition)))
+      (string_scalar) @FlamasterDefinition)))
 
 (block_mapping_pair
   key: (flow_node
     [
       (double_quote_scalar)
       (single_quote_scalar)
-    ] @AlabasterDefinition))
+    ] @FlamasterDefinition))
 
 ; Flow mapping keys
 (flow_mapping
   (_
     key: (flow_node
       (plain_scalar
-        (string_scalar) @AlabasterDefinition))))
+        (string_scalar) @FlamasterDefinition))))
 
 (flow_mapping
   (_
@@ -27,17 +27,17 @@
       [
         (double_quote_scalar)
         (single_quote_scalar)
-      ] @AlabasterDefinition)))
+      ] @FlamasterDefinition)))
 
 ; Anchors and aliases are constants (named references)
-(anchor_name) @AlabasterConstant
-(alias_name) @AlabasterConstant
+(anchor_name) @FlamasterConstant
+(alias_name) @FlamasterConstant
 
 ; Tags are constants (type annotations)
-(tag) @AlabasterConstant
+(tag) @FlamasterConstant
 
 ; YAML document markers are punctuation
 [
   "---"
   "..."
-] @AlabasterPunct
+] @FlamasterPunct

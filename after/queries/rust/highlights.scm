@@ -2,52 +2,52 @@
 ;; extends
 
 (struct_item
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @FlamasterDefinition)
 (enum_item
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @FlamasterDefinition)
 
 (impl_item
-  type: (type_identifier) @AlabasterDefinition)
+  type: (type_identifier) @FlamasterDefinition)
 
 (impl_item
   type: (scoped_type_identifier
           path: (scoped_identifier)
-          name: (type_identifier) @AlabasterDefinition))
+          name: (type_identifier) @FlamasterDefinition))
 
 (impl_item
   body: (declaration_list
           (type_item
-            name: (type_identifier) @AlabasterDefinition)))
+            name: (type_identifier) @FlamasterDefinition)))
 (impl_item
   type: (generic_type
-          type: (type_identifier) @AlabasterDefinition))
+          type: (type_identifier) @FlamasterDefinition))
 
 (trait_item
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @FlamasterDefinition)
 
 (trait_item
   body: (declaration_list
           (associated_type
-            name: (type_identifier) @AlabasterDefinition)))
+            name: (type_identifier) @FlamasterDefinition)))
 
 (trait_item
   body: (declaration_list
           (function_signature_item
-            name: (identifier) @AlabasterDefinition)))
+            name: (identifier) @FlamasterDefinition)))
 
 (function_item
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (macro_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (for_expression
-  "in" @AlabasterPunct)
+  "in" @FlamasterPunct)
 (type_arguments
-  "<" @AlabasterPunct)
+  "<" @FlamasterPunct)
 (type_arguments
-  ">" @AlabasterPunct)
+  ">" @FlamasterPunct)
 (type_parameters
-  "<" @AlabasterPunct)
+  "<" @FlamasterPunct)
 (type_parameters
-  ">" @AlabasterPunct)
+  ">" @FlamasterPunct)

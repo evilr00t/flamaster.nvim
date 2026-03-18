@@ -3,79 +3,79 @@
 
 (function_declarator
   declarator: (qualified_identifier
-                name: (identifier) @AlabasterDefinition))
+                name: (identifier) @FlamasterDefinition))
 
 ;; TODO there's probably a lot of duplicates here
 
 (function_definition
   declarator: (function_declarator
-                declarator: (destructor_name (identifier) @AlabasterDefinition)))
+                declarator: (destructor_name (identifier) @FlamasterDefinition)))
 
 (function_definition
   declarator: (function_declarator
-                declarator: (field_identifier) @AlabasterDefinition))
+                declarator: (field_identifier) @FlamasterDefinition))
 
 (function_definition
   declarator: (function_declarator
                 declarator: (qualified_identifier
                               name: (destructor_name
-                                      (identifier) @AlabasterDefinition))))
+                                      (identifier) @FlamasterDefinition))))
 
 (declaration
   declarator: (function_declarator
                 declarator:
-                  (destructor_name (identifier) @AlabasterDefinition)))
+                  (destructor_name (identifier) @FlamasterDefinition)))
 
 (field_declaration
   declarator: (function_declarator
-                declarator: (field_identifier) @AlabasterDefinition))
+                declarator: (field_identifier) @FlamasterDefinition))
 
 (field_declaration
   declarator: (pointer_declarator
                 declarator: (function_declarator
                               declarator:
-                                (field_identifier) @AlabasterDefinition)))
+                                (field_identifier) @FlamasterDefinition)))
 
 (function_declarator
- declarator: (field_identifier) @AlabasterDefinition)
+ declarator: (field_identifier) @FlamasterDefinition)
 
 (function_declarator
      declarator: (qualified_identifier
-                   name: (identifier) @AlabasterDefinition))
+                   name: (identifier) @FlamasterDefinition))
 (function_declarator
      declarator: (qualified_identifier
                    name: (qualified_identifier
-                           name: (identifier) @AlabasterDefinition)))
+                           name: (identifier) @FlamasterDefinition)))
 ((function_declarator
      declarator: (qualified_identifier
-                   name: (identifier) @AlabasterDefinition))
- (#lua-match? @AlabasterDefinition "^[A-Z]"))
+                   name: (identifier) @FlamasterDefinition))
+ (#lua-match? @FlamasterDefinition "^[A-Z]"))
 
 (labeled_statement
-  label: (statement_identifier) @AlabasterDefinition)
+  label: (statement_identifier) @FlamasterDefinition)
 
 (type_definition
-  declarator: (type_identifier) @AlabasterDefinition)
+  declarator: (type_identifier) @FlamasterDefinition)
 
 (preproc_def
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (class_specifier
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @FlamasterDefinition)
 
 (struct_specifier
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @FlamasterDefinition)
 
 (struct_specifier
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @FlamasterDefinition)
 
 (declaration
   type: (struct_specifier
-          name: (type_identifier) @AlabasterBase))
+          name: (type_identifier) @FlamasterBase))
 
 (enum_specifier
-    name: (type_identifier) @AlabasterDefinition)
+    name: (type_identifier) @FlamasterDefinition)
 
 (declaration
   type: (enum_specifier
-          name: (type_identifier) @AlabasterBase))
+          name: (type_identifier) @FlamasterBase))

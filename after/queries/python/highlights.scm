@@ -3,37 +3,37 @@
 
 ; Function and class definitions
 (function_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (class_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 ; Decorators are like type annotations — highlight name as constant
 (decorator
-  "@" @AlabasterPunct)
+  "@" @FlamasterPunct)
 
 (decorator
-  (identifier) @AlabasterConstant)
+  (identifier) @FlamasterConstant)
 
 (decorator
   (attribute
-    attribute: (identifier) @AlabasterConstant))
+    attribute: (identifier) @FlamasterConstant))
 
 (decorator
   (call
-    function: (identifier) @AlabasterConstant))
+    function: (identifier) @FlamasterConstant))
 
 (decorator
   (call
     function: (attribute
-      attribute: (identifier) @AlabasterConstant)))
+      attribute: (identifier) @FlamasterConstant)))
 
 ; None/True/False as constants (the upstream query uses @boolean/@constant.builtin
-; which both resolve to AlabasterBase; make them explicit)
-(none) @AlabasterConstant
-(true) @AlabasterConstant
-(false) @AlabasterConstant
+; which both resolve to FlamasterBase; make them explicit)
+(none) @FlamasterConstant
+(true) @FlamasterConstant
+(false) @FlamasterConstant
 
 ; Shebang line
-((module . (comment) @AlabasterHashbang)
- (#match? @AlabasterHashbang "^#!/"))
+((module . (comment) @FlamasterHashbang)
+ (#match? @FlamasterHashbang "^#!/"))

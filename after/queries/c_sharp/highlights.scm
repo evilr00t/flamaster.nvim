@@ -2,14 +2,14 @@
 ;; extends
 
 (type_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (constructor_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (destructor_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (method_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (property_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 (namespace_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)

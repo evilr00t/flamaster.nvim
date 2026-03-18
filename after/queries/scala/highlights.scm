@@ -2,19 +2,19 @@
 ;; extends
 
 (package_clause
-  (package_identifier) @AlabasterDefinition)
+  (package_identifier) @FlamasterDefinition)
 
 (function_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (function_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (class_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (object_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 (trait_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)

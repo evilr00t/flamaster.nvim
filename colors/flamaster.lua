@@ -3,7 +3,7 @@ if vim.fn.exists("syntax_on") == 1 then
     vim.cmd("syntax reset")
 end
 
-vim.g.colors_name = "alabaster"
+vim.g.colors_name = "flamaster"
 
 local theme
 ---@diagnostic disable: undefined-global
@@ -26,7 +26,7 @@ if vim.o.background == "dark" then
     vim.g.terminal_color_14 = "#7dcfff"
     vim.g.terminal_color_15 = "#c0caf5"
 
-    -- colors (Tokyo Night palette mapped to Alabaster's 4-role structure)
+    -- colors (Tokyo Night palette mapped to Flamaster's 4-role structure)
     local bg = "#1a1b26"
     local fg = "#c0caf5"
     local punct_fg = "#565f89"
@@ -61,13 +61,13 @@ if vim.o.background == "dark" then
         white = "#c0caf5",
         yellow = "#e0af68",
     }
-    local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
+    local comment_fg = vim.g.flamaster_dim_comments and dim_comment or comment
     local pmenu_bg = "#1f2335"
     local selection_bg = "#283457"
     local split_fg = "#3b4261"
     local lsp_ref_bg = "#2d3f76"
-    local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
-    local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#333333" }
+    local float_bg = vim.g.flamaster_floatborder and bg or pmenu_bg
+    local floatborder = vim.g.flamaster_floatborder and { bg = bg, fg = "#333333" }
         or {
             bg = float_bg,
             fg = float_bg,
@@ -280,12 +280,12 @@ if vim.o.background == "dark" then
         ["@text.warning"] = { bg = active, fg = bg },
 
         --- Theme specific
-        ["@AlabasterBase"] = { fg = ansi.white },
-        ["@AlabasterConstant"] = { fg = const_fg },
-        ["@AlabasterDefinition"] = { fg = def_fg },
-        ["@AlabasterPunct"] = { fg = punct_fg },
-        ["@AlabasterString"] = { fg = string_fg },
-        ["@AlabasterHashbang"] = { fg = dim_comment },
+        ["@FlamasterBase"] = { fg = ansi.white },
+        ["@FlamasterConstant"] = { fg = const_fg },
+        ["@FlamasterDefinition"] = { fg = def_fg },
+        ["@FlamasterPunct"] = { fg = punct_fg },
+        ["@FlamasterString"] = { fg = string_fg },
+        ["@FlamasterHashbang"] = { fg = dim_comment },
         --- Gitsigns
         GitSignsAdd = { fg = diffadd },
         GitSignsChange = { fg = diffchange },
@@ -335,16 +335,16 @@ if vim.o.background == "dark" then
         --- vim-matchup
         MatchupVirtualText = { fg = ansi.yellow },
         --- For `highlight link`
-        AlabasterBlack = { fg = ansi.black },
-        AlabasterBlue = { fg = ansi.blue },
-        AlabasterBrightYellow = { fg = ansi.brightyellow },
-        AlabasterCyan = { fg = ansi.cyan },
-        AlabasterGreen = { fg = ansi.green },
-        AlabasterDarkGreen = { fg = ansi.green },
-        AlabasterMagenta = { fg = ansi.magenta },
-        AlabasterRed = { fg = ansi.red },
-        AlabasterWhite = { fg = ansi.white },
-        AlabasterYellow = { fg = ansi.yellow },
+        FlamasterBlack = { fg = ansi.black },
+        FlamasterBlue = { fg = ansi.blue },
+        FlamasterBrightYellow = { fg = ansi.brightyellow },
+        FlamasterCyan = { fg = ansi.cyan },
+        FlamasterGreen = { fg = ansi.green },
+        FlamasterDarkGreen = { fg = ansi.green },
+        FlamasterMagenta = { fg = ansi.magenta },
+        FlamasterRed = { fg = ansi.red },
+        FlamasterWhite = { fg = ansi.white },
+        FlamasterYellow = { fg = ansi.yellow },
         --- Hop
         HopNextKey = { fg = ansi.brightyellow },
         HopNextKey1 = { fg = ansi.cyan },
@@ -373,21 +373,21 @@ if vim.o.background == "dark" then
         --- nvim-dap-virtual-text
         NvimDapVirtualText = { bg = pmenu_bg, fg = ansi.cyan },
         --- Noice
-        NoiceCmdlineIcon = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorder = { link = "AlabasterDarkGreen" },
-        NoiceConfirmBorder = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderCmdline = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconCmdline = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderFilter = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconFilter = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderLua = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconLua = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderSearch = { link = "AlabasterYellow" },
-        NoiceCmdlineIconSearch = { link = "AlabasterYellow" },
+        NoiceCmdlineIcon = { link = "FlamasterDarkGreen" },
+        NoiceCmdlinePopupBorder = { link = "FlamasterDarkGreen" },
+        NoiceConfirmBorder = { link = "FlamasterDarkGreen" },
+        NoiceCmdlinePopupBorderCmdline = { link = "FlamasterDarkGreen" },
+        NoiceCmdlineIconCmdline = { link = "FlamasterDarkGreen" },
+        NoiceCmdlinePopupBorderFilter = { link = "FlamasterDarkGreen" },
+        NoiceCmdlineIconFilter = { link = "FlamasterDarkGreen" },
+        NoiceCmdlinePopupBorderLua = { link = "FlamasterDarkGreen" },
+        NoiceCmdlineIconLua = { link = "FlamasterDarkGreen" },
+        NoiceCmdlinePopupBorderSearch = { link = "FlamasterYellow" },
+        NoiceCmdlineIconSearch = { link = "FlamasterYellow" },
         -- Languages
         --- asm
         asmDirective = { fg = dim_comment },
-        nasmLabel = { link = "@AlabasterDefinition" },
+        nasmLabel = { link = "@FlamasterDefinition" },
 
         ["@lsp.mod.declaration"] = { fg = fg },
         ["@lsp.type.enumMember"] = { fg = fg },
@@ -460,15 +460,15 @@ else
     local warn = "#BC7500"
     local hint = ansi.blue
     local info = "#278C00"
-    local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
+    local comment_fg = vim.g.flamaster_dim_comments and dim_comment or comment
     local pmenu_bg = "#e7e7e7"
     local cursorline_bg = "#E2EEEE"
     local lsp_ref_bg = "#dadada"
     local split_fg = "#abbdc0"
     local muted_fg = "#999999"
     local visual_bg = "#bfdbfe"
-    local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
-    local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#999999" }
+    local float_bg = vim.g.flamaster_floatborder and bg or pmenu_bg
+    local floatborder = vim.g.flamaster_floatborder and { bg = bg, fg = "#999999" }
         or {
             bg = float_bg,
             fg = float_bg,
@@ -682,12 +682,12 @@ else
         ["@text.warning"] = { bg = "#FFDEAA", fg = ansi.blue },
 
         --- Theme specific
-        ["@AlabasterBase"] = { fg = ansi.black },
-        ["@AlabasterConstant"] = { fg = const_fg },
-        ["@AlabasterDefinition"] = { fg = def_fg },
-        ["@AlabasterPunct"] = { fg = punct_fg },
-        ["@AlabasterString"] = { fg = string_fg },
-        ["@AlabasterHashbang"] = { fg = dim_comment },
+        ["@FlamasterBase"] = { fg = ansi.black },
+        ["@FlamasterConstant"] = { fg = const_fg },
+        ["@FlamasterDefinition"] = { fg = def_fg },
+        ["@FlamasterPunct"] = { fg = punct_fg },
+        ["@FlamasterString"] = { fg = string_fg },
+        ["@FlamasterHashbang"] = { fg = dim_comment },
         --- Gitsigns
         GitSignsAdd = { fg = "#6abf40" }, -- brighter green for gutter sign visibility
         GitSignsChange = { fg = diffchange },
@@ -735,16 +735,16 @@ else
         --- vim-matchup
         MatchupVirtualText = { fg = ansi.yellow },
         --- For `highlight link`
-        AlabasterBlack = { fg = ansi.black },
-        AlabasterBlue = { fg = ansi.blue },
-        AlabasterBrightYellow = { fg = ansi.brightyellow },
-        AlabasterCyan = { fg = ansi.cyan },
-        AlabasterGreen = { fg = ansi.green },
-        AlabasterBrightGreen = { fg = "#60cb00" },
-        AlabasterMagenta = { fg = ansi.magenta },
-        AlabasterRed = { fg = ansi.red },
-        AlabasterWhite = { fg = ansi.black },
-        AlabasterYellow = { fg = ansi.yellow },
+        FlamasterBlack = { fg = ansi.black },
+        FlamasterBlue = { fg = ansi.blue },
+        FlamasterBrightYellow = { fg = ansi.brightyellow },
+        FlamasterCyan = { fg = ansi.cyan },
+        FlamasterGreen = { fg = ansi.green },
+        FlamasterBrightGreen = { fg = "#60cb00" },
+        FlamasterMagenta = { fg = ansi.magenta },
+        FlamasterRed = { fg = ansi.red },
+        FlamasterWhite = { fg = ansi.black },
+        FlamasterYellow = { fg = ansi.yellow },
         --- Hop
         HopNextKey = { fg = ansi.yellow },
         HopNextKey1 = { fg = ansi.blue },
@@ -773,21 +773,21 @@ else
         --- nvim-dap-virtual-text
         NvimDapVirtualText = { bg = "#78D2C9", fg = fg },
         --- Noice
-        NoiceCmdlineIcon = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorder = { link = "AlabasterBrightGreen" },
-        NoiceConfirmBorder = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderCmdline = { link = "AlabasterBrightGreen" },
-        NoiceCmdlineIconCmdline = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderFilter = { link = "AlabasterBrightGreen" },
-        NoiceCmdlineIconFilter = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderLua = { link = "AlabasterBrightGreen" },
-        NoiceCmdlineIconLua = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderSearch = { link = "AlabasterYellow" },
-        NoiceCmdlineIconSearch = { link = "AlabasterYellow" },
+        NoiceCmdlineIcon = { link = "FlamasterBrightGreen" },
+        NoiceCmdlinePopupBorder = { link = "FlamasterBrightGreen" },
+        NoiceConfirmBorder = { link = "FlamasterBrightGreen" },
+        NoiceCmdlinePopupBorderCmdline = { link = "FlamasterBrightGreen" },
+        NoiceCmdlineIconCmdline = { link = "FlamasterBrightGreen" },
+        NoiceCmdlinePopupBorderFilter = { link = "FlamasterBrightGreen" },
+        NoiceCmdlineIconFilter = { link = "FlamasterBrightGreen" },
+        NoiceCmdlinePopupBorderLua = { link = "FlamasterBrightGreen" },
+        NoiceCmdlineIconLua = { link = "FlamasterBrightGreen" },
+        NoiceCmdlinePopupBorderSearch = { link = "FlamasterYellow" },
+        NoiceCmdlineIconSearch = { link = "FlamasterYellow" },
         -- Languages
         --- asm
         asmDirective = { fg = dim_comment },
-        nasmLabel = { link = "@AlabasterDefinition" },
+        nasmLabel = { link = "@FlamasterDefinition" },
         ["@lsp.mod.declaration"] = { fg = fg },
         ["@lsp.type.enumMember"] = { fg = fg },
         ["@lsp.type.function"] = { fg = fg },

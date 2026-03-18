@@ -1,14 +1,14 @@
-Alabaster Color Scheme
+Flamaster Color Scheme
 ===
 
 A color scheme with minimal highlighting for Neovim, using a palette inspired by [Tokyo Night](https://github.com/folke/tokyonight.nvim).
 
 ## Motivation
-(from the original [Sublime Text theme](https://github.com/tonsky/sublime-scheme-alabaster))
+(from the original [Sublime Text theme](https://github.com/tonsky/sublime-scheme-flamaster))
 
 Most color schemes highlight everything they can, ending up looking like a fireworks show.
 
-Instead, Alabaster uses minimal highlighting; it defines just four classes:
+Instead, Flamaster uses minimal highlighting; it defines just four classes:
 
 1. Strings
 2. All statically known constants (numbers, symbols, keywords, boolean values)
@@ -17,37 +17,37 @@ Instead, Alabaster uses minimal highlighting; it defines just four classes:
 
 Additionally:
 
-- Alabaster does not highlight standard language keywords (`if`, `else`, `function`, etc). They are usually the least important and most obvious part of any program.
+- Flamaster does not highlight standard language keywords (`if`, `else`, `function`, etc). They are usually the least important and most obvious part of any program.
 
-- Alabaster highlights comments. Most schemes try to dim comments using low-contrast greys. If code was complex enough to deserve an explanation, that explanation should be the first thing you see.
+- Flamaster highlights comments. Most schemes try to dim comments using low-contrast greys. If code was complex enough to deserve an explanation, that explanation should be the first thing you see.
 
-- Alabaster doesn't use font variations. It's hard to scan code when it jumps between normal, **bold** and *italics*. Also, not all fonts provide bold/italic variants.
+- Flamaster doesn't use font variations. It's hard to scan code when it jumps between normal, **bold** and *italics*. Also, not all fonts provide bold/italic variants.
 
 - Having a minimal set of rules means you can consciously use them to find exactly what you need. You can remember all the rules: if you're looking for a string, you know to look for a green token, and all strings pop out because very little else is highlighted.
 
-- Alabaster only highlights things that the parser can identify reliably. Partial or unreliable highlighting trains your brain to second-guess itself.
+- Flamaster only highlights things that the parser can identify reliably. Partial or unreliable highlighting trains your brain to second-guess itself.
 
 ## NOTE
-This is designed with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) in mind. There is some fallback highlighting for the built-in highlight groups, but the intended use is with treesitter. **nvim-treesitter is an unstable plugin that may introduce breaking changes at any time. Queries for many languages are bundled.** Please contribute queries if you can, following [these rules](https://github.com/tonsky/sublime-scheme-alabaster#motivation).
+This is designed with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) in mind. There is some fallback highlighting for the built-in highlight groups, but the intended use is with treesitter. **nvim-treesitter is an unstable plugin that may introduce breaking changes at any time. Queries for many languages are bundled.** Please contribute queries if you can, following [these rules](https://github.com/tonsky/sublime-scheme-flamaster#motivation).
 
 ## Usage
 ```vim
 set termguicolors
-colorscheme alabaster
+colorscheme flamaster
 ```
 
 The TUI will likely detect your terminal background and set `background` accordingly. To force a mode:
 ```vim
 set background=dark   " Tokyo Night palette
-set background=light  " original Alabaster palette
+set background=light  " original Flamaster palette
 ```
 
 ## Configuration
 
 | Option | Default | Description |
 |--------|---------|-------------|
-| `g:alabaster_dim_comments` | `false` | When `true`, comments are dimmed instead of highlighted bright |
-| `g:alabaster_floatborder` | `false` | When `true`, floating window borders have a visible foreground color and the background matches `Normal`. When `false`, borders are invisible (background matches popup menus) |
+| `g:flamaster_dim_comments` | `false` | When `true`, comments are dimmed instead of highlighted bright |
+| `g:flamaster_floatborder` | `false` | When `true`, floating window borders have a visible foreground color and the background matches `Normal`. When `false`, borders are invisible (background matches popup menus) |
 
 ## Treesitter language support
 
@@ -132,7 +132,7 @@ Help
 ![help-dark](https://user-images.githubusercontent.com/36493671/151689040-8eeeabdd-2aaa-418c-a3ab-8a7e09596abc.png)
 ![help-light](https://user-images.githubusercontent.com/36493671/196017663-966f361e-1548-4ab0-b8b7-6801d7dc3e30.png)
 
-## Alabaster for other tools
+## Flamaster for other tools
 - [wezterm](https://gist.github.com/p00f/ed538cf8a811184b23e065c0a5d3fc36)
 - [kitty](https://gist.github.com/p00f/ff17b05ff918559852ca7cb9d89432c1)
 - [alacritty](https://gist.github.com/p00f/37173508c85e33a4efa7aa394c0b763f)
@@ -141,6 +141,6 @@ Help
 - [fzf/skim](https://gist.github.com/p00f/9d159123c78cbcf8e716c362cfd4eb2b) (uses fish shell)
 
 ## Thanks
-- [tonsky](https://github.com/tonsky) for the original Alabaster theme and its philosophy
+- [tonsky](https://github.com/tonsky) for the original Flamaster theme and its philosophy
 - [folke](https://github.com/folke) for Tokyo Night, whose palette the dark mode is based on
 - [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme) for diff colours

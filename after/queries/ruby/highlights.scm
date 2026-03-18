@@ -3,27 +3,27 @@
 
 ;; methods
 (method
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 ;; singleton methods (def self.method)
 (singleton_method
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @FlamasterDefinition)
 
 ;; simple classes
 (class
-  name: (constant) @AlabasterDefinition)
+  name: (constant) @FlamasterDefinition)
 
 ;; modules
 (module
-  name: (constant) @AlabasterDefinition)
+  name: (constant) @FlamasterDefinition)
 
 ;; all constants in scope_resolution chains (handles any nesting depth)
 (scope_resolution
-  name: (constant) @AlabasterDefinition)
+  name: (constant) @FlamasterDefinition)
 (scope_resolution
-  scope: (constant) @AlabasterDefinition)
+  scope: (constant) @FlamasterDefinition)
 
-((simple_symbol) @AlabasterConstant)
-((hash_key_symbol) @AlabasterConstant)
+((simple_symbol) @FlamasterConstant)
+((hash_key_symbol) @FlamasterConstant)
 
-((instance_variable) @AlabasterPunct)
+((instance_variable) @FlamasterPunct)
