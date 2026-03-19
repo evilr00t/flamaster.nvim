@@ -40,7 +40,7 @@
 
 ; Type alias (PEP 695, Python 3.12+)
 (type_alias_statement
-  name: (type
+  left: (type
     (identifier) @FlamasterDefinition))
 
 ; __all__ exports list
