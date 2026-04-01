@@ -8,6 +8,16 @@
 (class_definition
   name: (identifier) @FlamasterDefinition)
 
+; Function parameters
+(function_definition
+  parameters: (parameters
+    (parameter) @FlamasterDefinition))
+
+; Lambda parameters
+(lambda
+  parameters: (lambda_parameters
+    (parameter) @FlamasterDefinition))
+
 ; Decorators are like type annotations — highlight name as constant
 (decorator
   "@" @FlamasterPunct)
@@ -34,6 +44,9 @@
 (true) @FlamasterLiteral
 (false) @FlamasterLiteral
 
+; Ellipsis literal
+(ellipsis) @FlamasterConstant
+
 ; Shebang line
 ((module . (comment) @FlamasterHashbang)
  (#match? @FlamasterHashbang "^#!/"))
@@ -48,11 +61,38 @@
   left: (identifier) @FlamasterDefinition
   (#eq? @FlamasterDefinition "__all__"))
 
+; Walrus operator assignments (:=)
+(named_expression
+  name: (identifier) @FlamasterDefinition)
+
+; Global/nonlocal declarations
+(global_statement
+  (identifier) @FlamasterDefinition)
+
+(nonlocal_statement
+  (identifier) @FlamasterDefinition)
+
+; Import aliases
+(aliased_import
+  alias: (identifier) @FlamasterDefinition)
+
+; Match statement case variables
+(case_clause
+  (case_pattern
+    (_as_pattern) @FlamasterDefinition))
+
 ; Exception handler variable (except ValueError as e:)
 (except_clause
   (as_pattern
     alias: (as_pattern_target
       (identifier) @FlamasterDefinition)))
+
+; With-statement variable (with open(...) as f:)
+(with_clause
+  (with_item
+    value: (as_pattern
+      alias: (as_pattern_target
+        (identifier) @FlamasterDefinition))))
 
 ; For-loop variables (for x in ..., for x, y in ..., for (x, y) in ...)
 (for_statement
@@ -69,10 +109,3 @@
   left: (pattern_list (identifier) @FlamasterDefinition))
 (for_in_clause
   left: (tuple_pattern (identifier) @FlamasterDefinition))
-
-; With-statement variable (with open(...) as f:)
-(with_clause
-  (with_item
-    value: (as_pattern
-      alias: (as_pattern_target
-        (identifier) @FlamasterDefinition))))
