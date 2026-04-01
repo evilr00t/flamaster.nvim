@@ -5,6 +5,10 @@
 (package_clause
   (package_identifier) @FlamasterDefinition)
 
+; Import alias names (import myfmt "fmt")
+(import_spec
+  name: (package_identifier) @FlamasterDefinition)
+
 ; Function and method declarations
 (function_declaration
   name: (identifier) @FlamasterDefinition)
@@ -18,9 +22,19 @@
     (parameter_declaration
       name: (identifier) @FlamasterDefinition)))
 
+; Function/method parameter names
+(parameter_declaration
+  name: (identifier) @FlamasterDefinition)
+(variadic_parameter_declaration
+  name: (identifier) @FlamasterDefinition)
+
 ; Type definitions: structs, interfaces, type aliases
 (type_spec
   name: (type_identifier) @FlamasterDefinition)
+
+; Type parameter names in generics ([T any])
+(type_parameter_declaration
+  name: (identifier) @FlamasterDefinition)
 
 ; Const names (sentinel errors, iota enums, etc.)
 (const_declaration
@@ -35,22 +49,43 @@
   (false)
 ] @FlamasterConstant
 
+; Numeric and rune literals
+(int_literal) @FlamasterConstant
+(float_literal) @FlamasterConstant
+(imaginary_literal) @FlamasterConstant
+(rune_literal) @FlamasterConstant
+
 ; Var block declarations (parallel to const)
 (var_declaration
   (var_spec
     name: (identifier) @FlamasterDefinition))
 
-; Interface method specs
-(interface_type
-  (method_spec
-    name: (field_identifier) @FlamasterDefinition))
+; Interface method names (method_elem replaced method_spec in tree-sitter-go)
+(method_elem
+  name: (field_identifier) @FlamasterDefinition)
 
-; Struct field tags (backtick strings like `json:"name"`)
+; Struct field names
+(field_declaration
+  name: (field_identifier) @FlamasterDefinition)
+
+; Struct field tags (backtick or quoted strings like `json:"name"`)
 (field_declaration
   tag: (raw_string_literal) @FlamasterConstant)
+(field_declaration
+  tag: (interpreted_string_literal) @FlamasterConstant)
 
 ; Short variable declarations (:=) — LHS names
 (short_var_declaration
+  left: (expression_list
+    (identifier) @FlamasterDefinition))
+
+; Type switch alias (switch v := x.(type))
+(type_switch_statement
+  alias: (expression_list
+    (identifier) @FlamasterDefinition))
+
+; Select receive LHS (case v, ok := <-ch:)
+(receive_statement
   left: (expression_list
     (identifier) @FlamasterDefinition))
 
