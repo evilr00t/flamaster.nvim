@@ -62,3 +62,11 @@
     "config.define_string_list"
     "config.parse"
     "ci_settings"))
+
+; For-loop iteration variables
+(for_statement
+  left: (identifier) @FlamasterDefinition)
+
+; Comprehension iteration variables
+(for_in_clause
+  left: (identifier) @FlamasterDefinition)

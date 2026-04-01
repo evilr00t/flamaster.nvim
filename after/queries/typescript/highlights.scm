@@ -18,3 +18,39 @@
   name: (type_identifier) @FlamasterDefinition)
 
 (undefined) @FlamasterConstant
+
+;; Boolean and null constants
+(true) @FlamasterConstant
+(false) @FlamasterConstant
+(null) @FlamasterConstant
+
+;; Class declarations
+(class_declaration
+  name: (type_identifier) @FlamasterDefinition)
+
+;; Enum declarations and members
+(enum_declaration
+  name: (identifier) @FlamasterDefinition)
+
+(enum_member
+  name: (property_identifier) @FlamasterDefinition)
+
+;; Variable declarator with function expression
+(variable_declarator
+  name: (identifier) @FlamasterDefinition
+  value: (function_expression))
+
+;; Generic type parameter brackets
+(type_parameters "<" @FlamasterPunct)
+(type_parameters ">" @FlamasterPunct)
+(type_arguments "<" @FlamasterPunct)
+(type_arguments ">" @FlamasterPunct)
+
+;; Decorator syntax
+(decorator "@" @FlamasterPunct)
+(decorator (identifier) @FlamasterConstant)
+(decorator (call_expression function: (identifier) @FlamasterConstant))
+
+;; For-in/for-of loop variables
+(for_in_statement
+  left: (identifier) @FlamasterDefinition)

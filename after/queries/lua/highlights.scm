@@ -24,4 +24,20 @@
 (table_constructor
   (field name: (identifier) @FlamasterString))
 
+;; Boolean and nil constants
+(true) @FlamasterConstant
+(false) @FlamasterConstant
+(nil) @FlamasterConstant
+
+;; For-in loop variables (for k, v in ...)
+(for_in_statement (identifier) @FlamasterDefinition)
+
+;; Numeric for-loop variable (for i = 1, 10 do)
+(for_statement name: (identifier) @FlamasterDefinition)
+
+;; Method-style function declarations (function Foo:bar())
+(function_declaration
+  name: (method_index_expression
+          method: (identifier) @FlamasterDefinition))
+
 (hash_bang_line) @FlamasterHashbang

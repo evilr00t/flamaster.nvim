@@ -80,3 +80,7 @@
   value: (sym_lit) @_kw
   (#any-of? @_kw "reify" "proxy")
   value: (sym_lit) @FlamasterConstant)
+
+; Builtin constants
+(nil_lit) @FlamasterConstant
+(bool_lit) @FlamasterConstant

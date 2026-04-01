@@ -26,4 +26,16 @@
 ((simple_symbol) @FlamasterConstant)
 ((hash_key_symbol) @FlamasterConstant)
 
+;; Boolean and nil constants
+(true) @FlamasterConstant
+(false) @FlamasterConstant
+(nil) @FlamasterConstant
+
+;; Block parameter variables (do |x, y|)
+(block_parameters (identifier) @FlamasterDefinition)
+
+;; Shebang line
+((program . (comment) @FlamasterHashbang)
+ (#match? @FlamasterHashbang "^#!/"))
+
 ((instance_variable) @FlamasterPunct)

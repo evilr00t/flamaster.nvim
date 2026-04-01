@@ -41,6 +41,21 @@
 (macro_definition
   name: (identifier) @FlamasterDefinition)
 
+(let_declaration
+  pattern: (identifier) @FlamasterDefinition)
+(for_expression
+  pattern: (identifier) @FlamasterDefinition)
+(enum_variant
+  name: (identifier) @FlamasterDefinition)
+(const_item
+  name: (identifier) @FlamasterDefinition)
+(static_item
+  name: (identifier) @FlamasterDefinition)
+(type_item
+  name: (type_identifier) @FlamasterDefinition)
+
+(boolean_literal) @FlamasterConstant
+
 (for_expression
   "in" @FlamasterPunct)
 (type_arguments
@@ -51,3 +66,9 @@
   "<" @FlamasterPunct)
 (type_parameters
   ">" @FlamasterPunct)
+(attribute_item
+  "#" @FlamasterPunct)
+(attribute
+  "[" @FlamasterPunct)
+(attribute
+  "]" @FlamasterPunct)

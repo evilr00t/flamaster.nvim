@@ -53,3 +53,26 @@
   (as_pattern
     alias: (as_pattern_target
       (identifier) @FlamasterDefinition)))
+
+; For-loop variables (for x in ..., for x, y in ..., for (x, y) in ...)
+(for_statement
+  left: (identifier) @FlamasterDefinition)
+(for_statement
+  left: (pattern_list (identifier) @FlamasterDefinition))
+(for_statement
+  left: (tuple_pattern (identifier) @FlamasterDefinition))
+
+; Comprehension variables ([x for x in ...], {k: v for k, v in ...})
+(for_in_clause
+  left: (identifier) @FlamasterDefinition)
+(for_in_clause
+  left: (pattern_list (identifier) @FlamasterDefinition))
+(for_in_clause
+  left: (tuple_pattern (identifier) @FlamasterDefinition))
+
+; With-statement variable (with open(...) as f:)
+(with_clause
+  (with_item
+    value: (as_pattern
+      alias: (as_pattern_target
+        (identifier) @FlamasterDefinition))))

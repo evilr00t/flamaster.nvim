@@ -21,3 +21,7 @@
 ; ((program . (hashfn) @FlamasterHashbang)
 ;  (#match? @FlamasterHashbang "^#!/")
 ;  (#set! "priority" 101))
+
+; Builtin constants
+(boolean) @FlamasterConstant
+(nil) @FlamasterConstant

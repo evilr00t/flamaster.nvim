@@ -14,3 +14,13 @@
 
 ((program . (comment) @FlamasterHashbang)
  (#match? @FlamasterHashbang "^#!/"))
+
+; For-loop variable
+(for_statement
+  variable: (variable_name) @FlamasterDefinition)
+
+; Local set variable (set without scope flags)
+(command
+  name: (word) @_cmd
+  (#eq? @_cmd "set")
+  argument: (word) @FlamasterDefinition)

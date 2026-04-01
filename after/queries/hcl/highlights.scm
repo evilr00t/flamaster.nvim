@@ -30,9 +30,13 @@
     (variable_expr
       (identifier) @FlamasterBase)))
 
-; Function names
+; Function names (calling a function is a reference, not a definition)
 (function_call
-  (identifier) @FlamasterDefinition)
+  (identifier) @FlamasterBase)
+
+; Boolean and null literals
+(bool_lit) @FlamasterConstant
+(null_lit) @FlamasterConstant
 
 ; Variable references (var.x, local.x, module.x, data.x)
 (expression

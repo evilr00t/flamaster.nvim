@@ -29,3 +29,12 @@
 (function_call
   function: (identifier) @FlamasterConstant
   (#any-of? @FlamasterConstant "include" "required" "default" "empty" "fail" "print" "printf" "println"))
+
+; Boolean and nil literals
+(true) @FlamasterConstant
+(false) @FlamasterConstant
+(nil) @FlamasterConstant
+
+; Variable declarations ($var := ...)
+(variable_definition
+  (variable) @FlamasterDefinition)

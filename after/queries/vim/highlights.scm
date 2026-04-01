@@ -10,3 +10,7 @@
 (function_definition
   (function_declaration
     name: (identifier) @FlamasterDefinition))
+
+; Command definitions
+(command_definition
+  name: (command_name) @FlamasterDefinition)

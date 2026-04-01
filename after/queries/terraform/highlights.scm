@@ -12,6 +12,10 @@
   (#any-of? @FlamasterConstant
     "bool" "string" "number" "object" "tuple" "list" "map" "set" "any"))
 
+; Boolean and null literals
+(bool_lit) @FlamasterConstant
+(null_lit) @FlamasterConstant
+
 ; Resource/data source type labels (e.g. "aws_instance") — these are like type names
 (body
   (block

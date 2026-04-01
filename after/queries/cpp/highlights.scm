@@ -66,9 +66,6 @@
 (struct_specifier
   name: (type_identifier) @FlamasterDefinition)
 
-(struct_specifier
-  name: (type_identifier) @FlamasterDefinition)
-
 (declaration
   type: (struct_specifier
           name: (type_identifier) @FlamasterBase))
@@ -79,3 +76,24 @@
 (declaration
   type: (enum_specifier
           name: (type_identifier) @FlamasterBase))
+
+(enumerator
+  name: (identifier) @FlamasterDefinition)
+
+(namespace_definition
+  name: (identifier) @FlamasterDefinition)
+(namespace_definition
+  name: (namespace_identifier) @FlamasterDefinition)
+
+(true) @FlamasterConstant
+(false) @FlamasterConstant
+(nullptr) @FlamasterConstant
+
+(template_argument_list
+  "<" @FlamasterPunct)
+(template_argument_list
+  ">" @FlamasterPunct)
+(template_parameter_list
+  "<" @FlamasterPunct)
+(template_parameter_list
+  ">" @FlamasterPunct)

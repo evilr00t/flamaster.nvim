@@ -6,3 +6,8 @@
 
 (type_declaration
   (identifier) @FlamasterDefinition)
+
+; Builtin constants
+(true) @FlamasterConstant
+(false) @FlamasterConstant
+(null) @FlamasterConstant

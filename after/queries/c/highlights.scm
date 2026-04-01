@@ -5,6 +5,8 @@
   declarator: (identifier) @FlamasterDefinition)
 (preproc_function_def
   name: (identifier) @FlamasterDefinition)
+(preproc_def
+  name: (identifier) @FlamasterDefinition)
 
 (type_definition
   type: (struct_specifier
@@ -32,3 +34,13 @@
 (declaration
   type: (enum_specifier
           name: (type_identifier) @FlamasterBase))
+
+(enumerator
+  name: (identifier) @FlamasterDefinition)
+
+(labeled_statement
+  label: (statement_identifier) @FlamasterDefinition)
+
+(true) @FlamasterConstant
+(false) @FlamasterConstant
+(null) @FlamasterConstant

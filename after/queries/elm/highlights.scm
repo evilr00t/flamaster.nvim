@@ -17,3 +17,11 @@
 
 (type_alias_declaration
   name: (upper_case_identifier) @FlamasterDefinition)
+
+;; Module declaration
+(module_declaration
+  (upper_case_qid) @FlamasterDefinition)
+
+;; Union type variant constructors
+(union_variant
+  (upper_case_identifier) @FlamasterDefinition)
