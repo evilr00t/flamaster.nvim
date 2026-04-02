@@ -33,6 +33,7 @@ if vim.o.background == "dark" then
     local def_fg = "#7aa2f7"
     local const_fg = "#bb9af7"
     local keyword_fg = "#9d7cd8"
+    local literal_fg = "#ff9e64"
     local active = "#e0af68"
     local string_fg = "#9ece6a"
     local darker_fg = "#737aa2"
@@ -141,10 +142,10 @@ if vim.o.background == "dark" then
         --- SYNTAX I: TS groups link to these
         Constant = { fg = const_fg },
         String = { fg = string_fg },
-        Character = { fg = const_fg },
-        Number = { fg = const_fg },
-        Boolean = { fg = const_fg },
-        Float = { fg = const_fg },
+        Character = { fg = literal_fg },
+        Number = { fg = literal_fg },
+        Boolean = { fg = literal_fg },
+        Float = { fg = literal_fg },
         Operator = { fg = punct_fg },
 
         --- SYNTAX II: TS groups have their own definition, the below are defined to have somewhat working hl w/o treesitter
@@ -267,6 +268,7 @@ if vim.o.background == "dark" then
         --- Theme specific
         ["@FlamasterBase"] = { fg = ansi.white },
         ["@FlamasterConstant"] = { fg = const_fg },
+        ["@FlamasterLiteral"] = { fg = literal_fg },
         ["@FlamasterDefinition"] = { fg = def_fg },
         ["@FlamasterPunct"] = { fg = punct_fg },
         ["@FlamasterString"] = { fg = string_fg },
@@ -486,6 +488,7 @@ else
     local punct_fg = "#777777"
     local def_fg = "#325cc0"
     local const_fg = "#7a3e9d"
+    local literal_fg = "#b5600e"
     local active = "#ffbc5d"
     local active_blue = "#007acc"
     local string_fg = "#448c27"
@@ -596,10 +599,10 @@ else
         --- SYNTAX I: TS groups link to these
         Constant = { fg = const_fg },
         String = { fg = string_fg },
-        Character = { fg = const_fg },
-        Number = { fg = const_fg },
-        Boolean = { fg = const_fg },
-        Float = { fg = const_fg },
+        Character = { fg = literal_fg },
+        Number = { fg = literal_fg },
+        Boolean = { fg = literal_fg },
+        Float = { fg = literal_fg },
         Operator = { fg = punct_fg },
 
         --- SYNTAX II: TS groups have their own definition, the below are defined to have somewhat working hl w/o treesitter
@@ -723,6 +726,7 @@ else
         --- Theme specific
         ["@FlamasterBase"] = { fg = ansi.black },
         ["@FlamasterConstant"] = { fg = const_fg },
+        ["@FlamasterLiteral"] = { fg = literal_fg },
         ["@FlamasterDefinition"] = { fg = def_fg },
         ["@FlamasterPunct"] = { fg = punct_fg },
         ["@FlamasterString"] = { fg = string_fg },
