@@ -27,9 +27,9 @@
   (#any-of? @FlamasterConstant "include" "required" "default" "empty" "fail" "print" "printf" "println"))
 
 ; Boolean and nil literals
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(nil) @FlamasterConstant
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(nil) @FlamasterLiteral
 
 ; Variable declarations ($var := ...)
 (variable_definition

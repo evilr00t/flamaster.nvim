@@ -81,6 +81,6 @@
   (#any-of? @_kw "reify" "proxy")
   value: (sym_lit) @FlamasterConstant)
 
-; Builtin constants
-(nil_lit) @FlamasterConstant
-(bool_lit) @FlamasterConstant
+; Builtin literals
+(nil_lit) @FlamasterLiteral
+(bool_lit) @FlamasterLiteral

@@ -19,9 +19,9 @@
 (foreach_statement
   left: (identifier) @FlamasterDefinition)
 
-;; Boolean/null constants
-(boolean_literal) @FlamasterConstant
-(null_literal) @FlamasterConstant
+;; Boolean/null literals
+(boolean_literal) @FlamasterLiteral
+(null_literal) @FlamasterLiteral
 
 ;; Attributes
 (attribute

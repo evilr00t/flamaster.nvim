@@ -35,8 +35,8 @@
   (identifier) @FlamasterBase)
 
 ; Boolean and null literals
-(bool_lit) @FlamasterConstant
-(null_lit) @FlamasterConstant
+(bool_lit) @FlamasterLiteral
+(null_lit) @FlamasterLiteral
 
 ; Variable references (var.x, local.x, module.x, data.x)
 (expression
