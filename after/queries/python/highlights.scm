@@ -28,11 +28,11 @@
     function: (attribute
       attribute: (identifier) @FlamasterConstant)))
 
-; None/True/False as constants (the upstream query uses @boolean/@constant.builtin
+; None/True/False as literals (the upstream query uses @boolean/@constant.builtin
 ; which both resolve to FlamasterBase; make them explicit)
-(none) @FlamasterConstant
-(true) @FlamasterConstant
-(false) @FlamasterConstant
+(none) @FlamasterLiteral
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
 
 ; Shebang line
 ((module . (comment) @FlamasterHashbang)

@@ -40,9 +40,9 @@
 (type_definition
   name: (type_identifier) @FlamasterDefinition)
 
-;; Boolean/null constants
-(boolean_literal) @FlamasterConstant
-(null_literal) @FlamasterConstant
+;; Boolean/null literals
+(boolean_literal) @FlamasterLiteral
+(null_literal) @FlamasterLiteral
 
 ;; Annotations
 (annotation

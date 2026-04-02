@@ -21,10 +21,10 @@
 (record_declaration
   name: (identifier) @FlamasterDefinition)
 
-;; Boolean/null constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(null_literal) @FlamasterConstant
+;; Boolean/null literals
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(null_literal) @FlamasterLiteral
 
 ;; Annotations
 (marker_annotation

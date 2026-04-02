@@ -26,10 +26,10 @@
 ((simple_symbol) @FlamasterConstant)
 ((hash_key_symbol) @FlamasterConstant)
 
-;; Boolean and nil constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(nil) @FlamasterConstant
+;; Boolean and nil literals
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(nil) @FlamasterLiteral
 
 ;; Block parameter variables (do |x, y|)
 (block_parameters (identifier) @FlamasterDefinition)

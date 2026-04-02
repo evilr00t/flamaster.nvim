@@ -5,10 +5,10 @@
 (function_definition
   name: (identifier) @FlamasterDefinition)
 
-; None/True/False as constants
-(none) @FlamasterConstant
-(true) @FlamasterConstant
-(false) @FlamasterConstant
+; None/True/False as literals
+(none) @FlamasterLiteral
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
 
 ; Decorators — highlight name as constant (statically known symbol)
 (decorator
