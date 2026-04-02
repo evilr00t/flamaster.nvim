@@ -39,7 +39,7 @@ if vim.o.background == "dark" then
     local diffdelete = "#914c54"
     local diffchange = "#6183bb"
     local statusline = "#16161e"
-    local comment = "#e0af68"
+    local comment = "#565f89"
     local dim_comment = "#414868"
     local bracket_fg = "#a9b1d6"
     local mistake = {
@@ -61,7 +61,7 @@ if vim.o.background == "dark" then
         white = "#c0caf5",
         yellow = "#e0af68",
     }
-    local comment_fg = vim.g.flamaster_dim_comments and dim_comment or comment
+    local comment_fg = vim.g.flamaster_bright_comments and "#e0af68" or comment
     local pmenu_bg = "#1f2335"
     local selection_bg = "#283457"
     local split_fg = "#3b4261"
