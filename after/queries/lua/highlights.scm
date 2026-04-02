@@ -30,10 +30,15 @@
 (nil) @FlamasterConstant
 
 ;; For-in loop variables (for k, v in ...)
-(for_in_statement (identifier) @FlamasterDefinition)
+(for_statement
+  (for_generic_clause
+    (variable_list
+      (identifier) @FlamasterDefinition)))
 
 ;; Numeric for-loop variable (for i = 1, 10 do)
-(for_statement name: (identifier) @FlamasterDefinition)
+(for_statement
+  (for_numeric_clause
+    (identifier) @FlamasterDefinition))
 
 ;; Method-style function declarations (function Foo:bar())
 (function_declaration

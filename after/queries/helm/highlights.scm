@@ -13,13 +13,9 @@
   (#any-of? @FlamasterConstant
     "Values" "Chart" "Release" "Capabilities" "Files" "Subcharts" "Template"))
 
-; Template function definitions
-(function_declaration
-  name: (identifier) @FlamasterDefinition)
-
-; Template action names (define/template/block)
-(template
-  name: (interpreted_string_literal) @FlamasterDefinition)
+; Template action names (define/block)
+(define_action
+  (interpreted_string_literal) @FlamasterDefinition)
 
 ; Pipeline function calls
 (function_call

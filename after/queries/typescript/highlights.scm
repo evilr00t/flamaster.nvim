@@ -32,8 +32,11 @@
 (enum_declaration
   name: (identifier) @FlamasterDefinition)
 
-(enum_member
-  name: (property_identifier) @FlamasterDefinition)
+(enum_body
+  (property_identifier) @FlamasterDefinition)
+(enum_body
+  (enum_assignment
+    (property_identifier) @FlamasterDefinition))
 
 ;; Variable declarator with function expression
 (variable_declarator

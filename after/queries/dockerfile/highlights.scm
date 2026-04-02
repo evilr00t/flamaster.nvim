@@ -22,7 +22,7 @@
 ; LABEL keys are definitions
 (label_instruction
   (label_pair
-    key: (attr_key) @FlamasterDefinition))
+    (unquoted_string) @FlamasterDefinition))
 
 ; EXPOSE port numbers as constants
 (expose_instruction
@@ -34,11 +34,7 @@
 
 ; COPY --from alias as constant reference
 (copy_instruction
-  (param
-    (mount_param_param
-      (mount_param_param) @_key
-      (#eq? @_key "from")
-      (mount_param_param) @FlamasterConstant)))
+  (param) @FlamasterConstant)
 
 ; SHELL instruction
 (shell_instruction

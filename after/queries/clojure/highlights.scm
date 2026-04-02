@@ -52,7 +52,7 @@
   value: (kwd_lit) @FlamasterConstant)
 ; Also as map keys (the most common use)
 (map_lit
-  key: (kwd_lit) @FlamasterConstant)
+  (kwd_lit) @FlamasterConstant)
 
 ; defmethod dispatch value and method name
 (list_lit

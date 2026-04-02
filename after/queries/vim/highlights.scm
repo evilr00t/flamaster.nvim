@@ -12,5 +12,5 @@
     name: (identifier) @FlamasterDefinition))
 
 ; Command definitions
-(command_definition
+(command_statement
   name: (command_name) @FlamasterDefinition)
