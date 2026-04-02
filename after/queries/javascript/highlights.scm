@@ -12,12 +12,12 @@
   name: (identifier) @FlamasterDefinition
   value: (function_expression))
 
-(undefined) @FlamasterConstant
+(undefined) @FlamasterLiteral
 
 ;; Boolean and null constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(null) @FlamasterConstant
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(null) @FlamasterLiteral
 
 ;; Class declarations
 (class_declaration

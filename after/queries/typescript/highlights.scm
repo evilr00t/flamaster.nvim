@@ -17,12 +17,12 @@
 (type_alias_declaration
   name: (type_identifier) @FlamasterDefinition)
 
-(undefined) @FlamasterConstant
+(undefined) @FlamasterLiteral
 
-;; Boolean and null constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(null) @FlamasterConstant
+;; Boolean and null literals
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(null) @FlamasterLiteral
 
 ;; Class declarations
 (class_declaration

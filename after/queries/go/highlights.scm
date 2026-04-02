@@ -47,13 +47,13 @@
   (nil)
   (true)
   (false)
-] @FlamasterConstant
+] @FlamasterLiteral
 
 ; Numeric and rune literals
-(int_literal) @FlamasterConstant
-(float_literal) @FlamasterConstant
-(imaginary_literal) @FlamasterConstant
-(rune_literal) @FlamasterConstant
+(int_literal) @FlamasterLiteral
+(float_literal) @FlamasterLiteral
+(imaginary_literal) @FlamasterLiteral
+(rune_literal) @FlamasterLiteral
 
 ; Var block declarations (parallel to const)
 (var_declaration

@@ -25,12 +25,12 @@
 (string_literal) @FlamasterString
 
 ;; Constants
-(boolean_literal) @FlamasterConstant
-(null_literal) @FlamasterConstant
-(integer_literal) @FlamasterConstant
-(long_literal) @FlamasterConstant
-(unsigned_literal) @FlamasterConstant
-(real_literal) @FlamasterConstant
+(boolean_literal) @FlamasterLiteral
+(null_literal) @FlamasterLiteral
+(integer_literal) @FlamasterLiteral
+(long_literal) @FlamasterLiteral
+(unsigned_literal) @FlamasterLiteral
+(real_literal) @FlamasterLiteral
 
 ;; Comments
 (line_comment) @Comment
