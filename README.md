@@ -8,18 +8,25 @@ A color scheme with minimal highlighting for Neovim, using a palette inspired by
 
 Most color schemes highlight everything they can, ending up looking like a fireworks show.
 
-Instead, Flamaster uses minimal highlighting; it defines just four classes:
+Instead, Flamaster uses minimal highlighting. The **light mode** follows the original four-class design:
 
-1. Strings
-2. All statically known constants (numbers, symbols, keywords, boolean values)
-3. Comments
-4. Global definitions
+1. **Strings** (green)
+2. **All statically known constants** — numbers, symbols, boolean values (purple)
+3. **Comments** (red — bright, prominent)
+4. **Global definitions** (blue)
 
-Additionally:
+The **dark mode** (Tokyo Night palette) extends this with two additional classes for better visual distinction:
 
-- Flamaster does not highlight standard language keywords (`if`, `else`, `function`, etc). They are usually the least important and most obvious part of any program.
+5. **Keywords** — `if`, `else`, `function`, `return`, etc. (purple `#9d7cd8`)
+6. **Literals** — booleans, numbers, `nil`/`null` (orange `#ff9e64`), separated from other constants like decorators and symbols which stay magenta (`#bb9af7`)
 
-- Flamaster highlights comments. Most schemes try to dim comments using low-contrast greys. If code was complex enough to deserve an explanation, that explanation should be the first thing you see.
+Additionally, dark mode comments default to a muted grey (`#565f89`, matching Tokyo Night) rather than bright amber. Set `g:flamaster_bright_comments` to restore the prominent amber style.
+
+Other design principles:
+
+- **Light mode** does not highlight standard language keywords (`if`, `else`, `function`, etc). They are usually the least important and most obvious part of any program. **Dark mode** gives keywords a subtle purple to better match Tokyo Night's visual language.
+
+- **Light mode** highlights comments prominently (red). If code was complex enough to deserve an explanation, that explanation should be the first thing you see. **Dark mode** uses muted grey by default (configurable).
 
 - Flamaster doesn't use font variations. It's hard to scan code when it jumps between normal, **bold** and *italics*. Also, not all fonts provide bold/italic variants.
 
@@ -49,7 +56,8 @@ set background=light  " original Flamaster palette
 
 | Option | Default | Description |
 |--------|---------|-------------|
-| `g:flamaster_dim_comments` | `false` | When `true`, comments are dimmed instead of highlighted bright |
+| `g:flamaster_bright_comments` | `false` | **Dark mode only.** When `true`, comments use bright amber (`#e0af68`) instead of the default muted grey (`#565f89`) |
+| `g:flamaster_dim_comments` | `false` | **Light mode only.** When `true`, comments are dimmed to grey instead of highlighted red |
 | `g:flamaster_floatborder` | `false` | When `true`, floating window borders have a visible foreground color and the background matches `Normal`. When `false`, borders are invisible (background matches popup menus) |
 
 ## Treesitter language support
