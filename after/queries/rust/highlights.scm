@@ -54,7 +54,7 @@
 (type_item
   name: (type_identifier) @FlamasterDefinition)
 
-(boolean_literal) @FlamasterConstant
+(boolean_literal) @FlamasterLiteral
 
 (for_expression
   "in" @FlamasterPunct)

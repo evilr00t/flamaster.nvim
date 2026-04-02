@@ -5,7 +5,7 @@
   name: (identifier) @FlamasterDefinition)
 
 ; Builtin constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(null) @FlamasterConstant
-(undefined) @FlamasterConstant
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(null) @FlamasterLiteral
+(undefined) @FlamasterLiteral

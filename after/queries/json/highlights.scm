@@ -6,8 +6,8 @@
     key: (string) @FlamasterString))
 
 ;; Boolean constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
 
 ;; Null constant
-(null) @FlamasterConstant
+(null) @FlamasterLiteral

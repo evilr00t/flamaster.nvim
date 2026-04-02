@@ -25,9 +25,9 @@
   (field name: (identifier) @FlamasterString))
 
 ;; Boolean and nil constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(nil) @FlamasterConstant
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(nil) @FlamasterLiteral
 
 ;; For-in loop variables (for k, v in ...)
 (for_statement

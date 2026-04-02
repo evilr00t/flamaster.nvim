@@ -8,6 +8,6 @@
   (identifier) @FlamasterDefinition)
 
 ; Builtin constants
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(null) @FlamasterConstant
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(null) @FlamasterLiteral

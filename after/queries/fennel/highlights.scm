@@ -23,5 +23,5 @@
 ;  (#set! "priority" 101))
 
 ; Builtin constants
-(boolean) @FlamasterConstant
-(nil) @FlamasterConstant
+(boolean) @FlamasterLiteral
+(nil) @FlamasterLiteral

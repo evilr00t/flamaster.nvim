@@ -85,9 +85,9 @@
 (namespace_definition
   name: (namespace_identifier) @FlamasterDefinition)
 
-(true) @FlamasterConstant
-(false) @FlamasterConstant
-(nullptr) @FlamasterConstant
+(true) @FlamasterLiteral
+(false) @FlamasterLiteral
+(nullptr) @FlamasterLiteral
 
 (template_argument_list
   "<" @FlamasterPunct)
