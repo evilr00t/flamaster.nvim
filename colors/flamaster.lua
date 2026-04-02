@@ -32,6 +32,7 @@ if vim.o.background == "dark" then
     local punct_fg = "#565f89"
     local def_fg = "#7aa2f7"
     local const_fg = "#bb9af7"
+    local keyword_fg = "#9d7cd8"
     local active = "#e0af68"
     local string_fg = "#9ece6a"
     local darker_fg = "#737aa2"
@@ -149,14 +150,14 @@ if vim.o.background == "dark" then
         --- SYNTAX II: TS groups have their own definition, the below are defined to have somewhat working hl w/o treesitter
         Identifier = { fg = ansi.white },
         Function = { fg = def_fg },
-        Statement = { fg = ansi.white },
-        Conditional = { fg = ansi.white },
-        Repeat = { fg = ansi.white },
+        Statement = { fg = keyword_fg },
+        Conditional = { fg = keyword_fg },
+        Repeat = { fg = keyword_fg },
         Label = { fg = def_fg },
-        Keyword = { fg = ansi.white },
-        Exception = { fg = ansi.white },
+        Keyword = { fg = keyword_fg },
+        Exception = { fg = keyword_fg },
         PreProc = { fg = ansi.white },
-        Include = { fg = ansi.white },
+        Include = { fg = keyword_fg },
         Define = { fg = ansi.white },
         Macro = { fg = ansi.white },
         PreCondit = { fg = ansi.white },
@@ -209,17 +210,17 @@ if vim.o.background == "dark" then
 
         ["@attribute"] = {},
         ["@constructor"] = { fg = ansi.white },
-        ["@keyword.conditional"] = { fg = ansi.white },
+        ["@keyword.conditional"] = { fg = keyword_fg },
         ["@constant.builtin"] = { fg = const_fg },
         ["@constant.macro"] = { fg = ansi.white },
-        ["@keyword.exception"] = { fg = ansi.white },
+        ["@keyword.exception"] = { fg = keyword_fg },
         ["@variable.member"] = { fg = ansi.white },
         ["@function"] = { fg = ansi.white },
         ["@function.builtin"] = { fg = ansi.white },
         ["@function.macro"] = { fg = ansi.white },
-        ["@keyword"] = { fg = ansi.white },
-        ["@keyword.function"] = { fg = ansi.white },
-        ["@keyword.operator"] = { fg = ansi.white },
+        ["@keyword"] = { fg = keyword_fg },
+        ["@keyword.function"] = { fg = keyword_fg },
+        ["@keyword.operator"] = { fg = keyword_fg },
         ["@label"] = { fg = ansi.white },
         ["@function.method"] = { fg = ansi.white },
         ["@module"] = { fg = ansi.white },
@@ -228,7 +229,7 @@ if vim.o.background == "dark" then
         ["@punctuation.delimiter"] = { fg = punct_fg },
         ["@punctuation.bracket"] = { fg = bracket_fg },
         ["@punctuation.special"] = { fg = punct_fg },
-        ["@keyword.repeat"] = { fg = ansi.white },
+        ["@keyword.repeat"] = { fg = keyword_fg },
         ["@string"] = { fg = string_fg },
         ["@string.regexp"] = { bg = pmenu_bg, fg = const_fg },
         ["@string.escape"] = { bg = pmenu_bg, fg = const_fg },
@@ -445,7 +446,7 @@ if vim.o.background == "dark" then
         ["@lsp.type.parameter"] = { fg = fg },
         ["@lsp.type.variable"] = { fg = fg },
         ["@lsp.type.property"] = { fg = fg },
-        ["@lsp.type.keyword"] = { fg = fg },
+        ["@lsp.type.keyword"] = { fg = keyword_fg },
         ["@lsp.type.modifier"] = { fg = fg },
         ["@lsp.type.comment"] = { link = "Comment" },
         ["@lsp.type.string"] = { link = "String" },
