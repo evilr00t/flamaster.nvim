@@ -76,10 +76,10 @@
 (aliased_import
   alias: (identifier) @FlamasterDefinition)
 
-; Match statement case variables
+; Match statement case variables (case x as y:)
 (case_clause
   (case_pattern
-    (_as_pattern) @FlamasterDefinition))
+    (as_pattern) @FlamasterDefinition))
 
 ; Exception handler variable (except ValueError as e:)
 (except_clause
