@@ -104,6 +104,10 @@
 (type_parameter_list
   "]" @FlamasterPunct)
 
-; Override control flow keywords to plain foreground
-("range" @FlamasterBase
+; Structural keywords → purple (via @FlamasterKeyword)
+(["func" "return" "defer" "go" "select" "chan" "map" "struct" "interface" "type" "const" "var" "package" "import" "fallthrough"] @FlamasterKeyword
+ (#set! priority 101))
+
+; Control flow keywords → plain foreground (via @FlamasterBase)
+(["if" "else" "for" "range" "switch" "case" "default" "break" "continue" "goto"] @FlamasterBase
  (#set! priority 101))

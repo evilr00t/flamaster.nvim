@@ -270,6 +270,7 @@ if vim.o.background == "dark" then
         ["@FlamasterConstant"] = { fg = const_fg },
         ["@FlamasterLiteral"] = { fg = literal_fg },
         ["@FlamasterDefinition"] = { fg = def_fg },
+        ["@FlamasterKeyword"] = { fg = keyword_fg },
         ["@FlamasterPunct"] = { fg = punct_fg },
         ["@FlamasterString"] = { fg = string_fg },
         ["@FlamasterHashbang"] = { fg = dim_comment },
@@ -728,6 +729,7 @@ else
         ["@FlamasterConstant"] = { fg = const_fg },
         ["@FlamasterLiteral"] = { fg = literal_fg },
         ["@FlamasterDefinition"] = { fg = def_fg },
+        ["@FlamasterKeyword"] = { fg = ansi.black },  -- Light mode: keywords stay plain
         ["@FlamasterPunct"] = { fg = punct_fg },
         ["@FlamasterString"] = { fg = string_fg },
         ["@FlamasterHashbang"] = { fg = dim_comment },
