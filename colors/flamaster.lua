@@ -448,7 +448,7 @@ if vim.o.background == "dark" then
         ["@lsp.type.parameter"] = { fg = fg },
         ["@lsp.type.variable"] = { fg = fg },
         ["@lsp.type.property"] = { fg = fg },
-        ["@lsp.type.keyword"] = { fg = keyword_fg },
+        ["@lsp.type.keyword"] = { fg = fg },  -- Let treesitter @keyword.* groups control color
         ["@lsp.type.modifier"] = { fg = fg },
         ["@lsp.type.comment"] = { link = "Comment" },
         ["@lsp.type.string"] = { link = "String" },
