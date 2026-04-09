@@ -103,3 +103,7 @@
   "[" @FlamasterPunct)
 (type_parameter_list
   "]" @FlamasterPunct)
+
+; Override control flow keywords to plain foreground
+("range" @FlamasterBase
+ (#set! priority 101))
