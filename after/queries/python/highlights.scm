@@ -79,7 +79,9 @@
 ; Match statement case variables (case x as y:)
 (case_clause
   (case_pattern
-    (as_pattern) @FlamasterDefinition))
+    (as_pattern
+      alias: (as_pattern_target
+        (identifier) @FlamasterDefinition))))
 
 ; Exception handler variable (except ValueError as e:)
 (except_clause
