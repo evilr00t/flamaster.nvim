@@ -11,3 +11,6 @@
 
 ;; Null constant
 (null) @FlamasterLiteral
+
+;; Number literals
+(number) @FlamasterLiteral

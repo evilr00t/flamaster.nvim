@@ -34,3 +34,16 @@
 
 (pair
   (quoted_key) @FlamasterBase)
+
+; Boolean values
+(boolean) @FlamasterLiteral
+
+; Numeric values
+(integer) @FlamasterLiteral
+(float) @FlamasterLiteral
+
+; Datetime values (ISO 8601 / RFC 3339)
+(offset_date_time) @FlamasterLiteral
+(local_date_time) @FlamasterLiteral
+(local_date) @FlamasterLiteral
+(local_time) @FlamasterLiteral

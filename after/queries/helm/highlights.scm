@@ -34,3 +34,20 @@
 ; Variable declarations ($var := ...)
 (variable_definition
   (variable) @FlamasterDefinition)
+
+; Control flow keywords
+(if_action "if" @FlamasterKeyword)
+(range_action "range" @FlamasterKeyword)
+(with_action "with" @FlamasterKeyword)
+(block_action "block" @FlamasterKeyword)
+(template_action "template" @FlamasterKeyword)
+((else_action) @FlamasterKeyword)
+((end_action) @FlamasterKeyword)
+
+; Block action template names (like define but for inheritance)
+(block_action
+  (interpreted_string_literal) @FlamasterDefinition)
+
+; Template action call name
+(template_action
+  (interpreted_string_literal) @FlamasterConstant)

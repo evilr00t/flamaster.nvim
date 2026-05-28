@@ -17,3 +17,26 @@
 
 ;; Special variables ($?, $#, $@, etc.)
 (special_variable_name) @FlamasterConstant
+
+;; local/declare/export/readonly variable names
+(declaration_command
+  (variable_assignment
+    name: (variable_name) @FlamasterDefinition))
+
+;; Array element assignments
+(array_variable
+  (variable_name) @FlamasterDefinition)
+
+;; trap handler name
+(command
+  name: (word) @_trap
+  (#eq? @_trap "trap")
+  argument: (word) @FlamasterConstant .)
+
+;; Heredoc delimiter names
+(heredoc_redirect
+  (heredoc_start) @FlamasterConstant)
+
+;; true/false builtins
+((word) @FlamasterLiteral
+ (#any-of? @FlamasterLiteral "true" "false"))

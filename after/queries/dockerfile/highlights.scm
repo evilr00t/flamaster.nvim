@@ -40,3 +40,31 @@
 (shell_instruction
   (json_string_array
     (json_string) @FlamasterString))
+
+; USER name or uid as definition
+(user_instruction
+  user: (unquoted_string) @FlamasterDefinition)
+
+; VOLUME mount points
+(volume_instruction
+  (path) @FlamasterString)
+
+; ENTRYPOINT executable
+(entrypoint_instruction
+  (json_string_array
+    (json_string) @FlamasterString))
+
+; CMD executable
+(cmd_instruction
+  (json_string_array
+    (json_string) @FlamasterString))
+
+; HEALTHCHECK interval/timeout options
+(healthcheck_instruction
+  (cmd_instruction
+    (json_string_array
+      (json_string) @FlamasterString)))
+
+; ADD destination path
+(add_instruction
+  (path) @FlamasterString)

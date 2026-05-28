@@ -28,3 +28,27 @@
 ; Shebang-style comments in recipe lines
 ((comment) @FlamasterHashbang
  (#match? @FlamasterHashbang "^#!/"))
+
+; Prerequisites (dependencies) are base text — visible but not dominant
+(rule
+  (prerequisites
+    (word) @FlamasterBase))
+
+; Special targets (.PHONY, .SUFFIXES, etc.) — override plain definition color
+(rule
+  (targets
+    (word) @FlamasterConstant
+    (#match? @FlamasterConstant "^\\.")))
+
+; Conditional directive keywords
+(ifdef_directive "ifdef" @FlamasterKeyword)
+(ifdef_directive "ifndef" @FlamasterKeyword)
+(ifeq_directive "ifeq" @FlamasterKeyword)
+(ifeq_directive "ifneq" @FlamasterKeyword)
+((else_directive) @FlamasterKeyword)
+((endif_directive) @FlamasterKeyword)
+
+; include paths
+(include_directive
+  (list
+    (word) @FlamasterString))

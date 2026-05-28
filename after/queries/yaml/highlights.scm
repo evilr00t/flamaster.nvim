@@ -41,3 +41,9 @@
   "---"
   "..."
 ] @FlamasterPunct
+
+; Literal scalar values
+(boolean_scalar) @FlamasterLiteral
+(null_scalar) @FlamasterLiteral
+(integer_scalar) @FlamasterLiteral
+(float_scalar) @FlamasterLiteral
