@@ -23,11 +23,6 @@
   (variable_assignment
     name: (variable_name) @FlamasterDefinition))
 
-;; trap handler name
-(command
-  name: (word) @_trap
-  (#eq? @_trap "trap")
-  argument: (word) @FlamasterConstant .)
 
 ;; Heredoc delimiter names
 (heredoc_redirect
