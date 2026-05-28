@@ -23,10 +23,6 @@
   (variable_assignment
     name: (variable_name) @FlamasterDefinition))
 
-;; Array element assignments
-(array_variable
-  (variable_name) @FlamasterDefinition)
-
 ;; trap handler name
 (command
   name: (word) @_trap
