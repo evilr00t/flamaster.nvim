@@ -9,14 +9,16 @@
   name: (identifier) @FlamasterDefinition)
 
 ; Function parameters
-(function_definition
-  parameters: (parameters
-    (parameter) @FlamasterDefinition))
+(parameters (identifier) @FlamasterDefinition)
+(parameters (default_parameter name: (identifier) @FlamasterDefinition))
+(parameters (typed_parameter (identifier) @FlamasterDefinition))
+(parameters (typed_default_parameter name: (identifier) @FlamasterDefinition))
+(parameters (list_splat_pattern (identifier) @FlamasterDefinition))
+(parameters (dictionary_splat_pattern (identifier) @FlamasterDefinition))
 
 ; Lambda parameters
-(lambda
-  parameters: (lambda_parameters
-    (parameter) @FlamasterDefinition))
+(lambda_parameters (identifier) @FlamasterDefinition)
+(lambda_parameters (default_parameter name: (identifier) @FlamasterDefinition))
 
 ; Decorators are like type annotations — highlight name as constant
 (decorator
