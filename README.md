@@ -85,7 +85,7 @@ Bundled query overrides for:
 | Kotlin | Functions, classes, literals; annotations as punctuation |
 | Lua | Function declarations and assignments, table field names |
 | Make | Target names, variable assignment names, automatic variables |
-| Python | Functions, classes, decorators; `None`/`True`/`False` as constants; shebangs; type aliases (PEP 695), `__all__` exports, exception handler variables |
+| Python | Functions, classes, parameters (simple, typed, default, `*args`, `**kwargs`), decorators; `None`/`True`/`False` as constants; shebangs; type aliases (PEP 695), `__all__` exports, exception handler variables |
 | Ruby | Methods, classes, modules, symbols, instance variables |
 | Rust | Functions, structs, enums, traits, impls, macros; generic angle brackets as punctuation |
 | Scala | Functions, classes, objects, traits, packages |
