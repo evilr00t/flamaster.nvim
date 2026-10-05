@@ -77,7 +77,7 @@ if vim.o.background == "dark" then
     theme = {
         Comment = { fg = comment_fg },
         ColorColumn = { bg = pmenu_bg },
-        Conceal = { fg = "#b0b0b0" },
+        Conceal = { fg = darker_fg },
         Cursor = { bg = active, fg = "#000000" },
         -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
         -- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
@@ -329,6 +329,7 @@ if vim.o.background == "dark" then
         FlamasterCyan = { fg = ansi.cyan },
         FlamasterGreen = { fg = ansi.green },
         FlamasterDarkGreen = { fg = ansi.green },
+        FlamasterBrightGreen = { fg = ansi.green },
         FlamasterMagenta = { fg = ansi.magenta },
         FlamasterRed = { fg = ansi.red },
         FlamasterWhite = { fg = ansi.white },
@@ -748,6 +749,8 @@ else
         TelescopeResultsTitle = { fg = ansi.yellow },
         --- fzf-lua
         FzfLuaBorder = { fg = split_fg },
+        --- mini.nvim
+        MiniPickMatchCurrent  = { fg = "#CC6F14" },
         --- Neogit
         NeogitPopupActionDisabled = { fg = darker_fg },
         NeogitPopupActionKey = { fg = ansi.magenta },
@@ -786,6 +789,7 @@ else
         FlamasterBrightYellow = { fg = ansi.brightyellow },
         FlamasterCyan = { fg = ansi.cyan },
         FlamasterGreen = { fg = ansi.green },
+        FlamasterDarkGreen = { fg = ansi.green },
         FlamasterBrightGreen = { fg = "#60cb00" },
         FlamasterMagenta = { fg = ansi.magenta },
         FlamasterRed = { fg = ansi.red },
