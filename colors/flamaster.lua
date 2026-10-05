@@ -69,7 +69,7 @@ if vim.o.background == "dark" then
     local split_fg = "#3b4261"
     local lsp_ref_bg = "#2d3f76"
     local float_bg = vim.g.flamaster_floatborder and bg or pmenu_bg
-    local floatborder = vim.g.flamaster_floatborder and { bg = bg, fg = "#333333" }
+    local floatborder = vim.g.flamaster_floatborder and { bg = bg, fg = punct_fg }
         or {
             bg = float_bg,
             fg = float_bg,
@@ -119,7 +119,7 @@ if vim.o.background == "dark" then
         PmenuThumb = { bg = split_fg },
         Question = { fg = diffadd },
         QuickFixLine = { bg = pmenu_bg },
-        Search = { bg = selection_bg },
+        Search = { bg = "#3d59a1" },
         CurSearch = { bg = ansi.yellow, fg = bg },
         SpecialKey = { fg = ansi.cyan },
         SpellBad = { undercurl = true, sp = ansi.red },
@@ -586,14 +586,14 @@ else
         SpellLocal = { undercurl = true, sp = ansi.cyan },
         SpellRare = { undercurl = true, sp = ansi.magenta },
         StatusLine = { bg = statusline, fg = fg },
-        StatusLineNC = { bg = statusline, fg = "#9f9f9f" },
+        StatusLineNC = { bg = statusline, fg = "#666666" },
         TabLine = { bg = statusline, fg = darker_fg },
         TabLineFill = { bg = statusline },
         TabLineSel = { bg = statusline, fg = ansi.blue },
         Title = { fg = const_fg },
         Visual = { bg = visual_bg },
         VisualNOS = { bg = visual_bg },
-        WarningMsg = { fg = "#e1ad4c" },
+        WarningMsg = { fg = warn },
         WildMenu = { bg = muted_fg },
         WinBar = { bg = bg, fg = ansi.black, bold = true },
         WinBarNC = { bg = bg, fg = darker_fg },
