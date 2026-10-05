@@ -8,23 +8,22 @@ A color scheme with minimal highlighting for Neovim, using a palette inspired by
 
 Most color schemes highlight everything they can, ending up looking like a fireworks show.
 
-Instead, Flamaster uses minimal highlighting. The **light mode** follows the original four-class design:
+Instead, Flamaster uses minimal highlighting. Both modes follow the original four-class design:
 
 1. **Strings** (green)
-2. **All statically known constants** — numbers, symbols, boolean values (purple)
-3. **Comments** (red — bright, prominent)
+2. **All statically known constants** — symbols, decorators, enum-like values (purple). **Literals** — numbers, booleans, `nil`/`null` — are split out in orange (`#b5600e` light, `#ff9e64` dark), so they stand apart from other constants (`#7a3e9d` light, `#bb9af7` dark)
+3. **Comments** (red in light mode — bright, prominent)
 4. **Global definitions** (blue)
 
-The **dark mode** (Tokyo Night palette) extends this with two additional classes for better visual distinction:
+The **dark mode** (Tokyo Night palette) adds one more class:
 
-5. **Keywords** — `if`, `else`, `function`, `return`, etc. (purple `#9d7cd8`)
-6. **Literals** — booleans, numbers, `nil`/`null` (orange `#ff9e64`), separated from other constants like decorators and symbols which stay magenta (`#bb9af7`)
+5. **Keywords** — `function`, `return`, `import`, etc. (purple `#9d7cd8`). Control flow (`if`, `else`, `for`, `while`) stays plain foreground
 
 Additionally, dark mode comments default to a muted grey (`#565f89`, matching Tokyo Night) rather than bright amber. Set `g:flamaster_bright_comments` to restore the prominent amber style.
 
 Other design principles:
 
-- **Light mode** does not highlight standard language keywords (`if`, `else`, `function`, etc). They are usually the least important and most obvious part of any program. **Dark mode** gives keywords a subtle purple to better match Tokyo Night's visual language.
+- **Light mode** does not highlight standard language keywords (`if`, `else`, `function`, etc). They are usually the least important and most obvious part of any program. **Dark mode** gives non-control-flow keywords a subtle purple to better match Tokyo Night's visual language.
 
 - **Light mode** highlights comments prominently (red). If code was complex enough to deserve an explanation, that explanation should be the first thing you see. **Dark mode** uses muted grey by default (configurable).
 
