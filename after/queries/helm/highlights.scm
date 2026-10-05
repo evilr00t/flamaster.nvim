@@ -41,8 +41,7 @@
 (with_action "with" @FlamasterKeyword)
 (block_action "block" @FlamasterKeyword)
 (template_action "template" @FlamasterKeyword)
-((else_action) @FlamasterKeyword)
-((end_action) @FlamasterKeyword)
+["else" "end"] @FlamasterKeyword
 
 ; Block action template names (like define but for inheritance)
 (block_action

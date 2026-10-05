@@ -42,11 +42,11 @@
 
 ; Conditional directive keywords
 (ifdef_directive "ifdef" @FlamasterKeyword)
-(ifdef_directive "ifndef" @FlamasterKeyword)
+(ifndef_directive "ifndef" @FlamasterKeyword)
 (ifeq_directive "ifeq" @FlamasterKeyword)
-(ifeq_directive "ifneq" @FlamasterKeyword)
+(ifneq_directive "ifneq" @FlamasterKeyword)
 ((else_directive) @FlamasterKeyword)
-((endif_directive) @FlamasterKeyword)
+(conditional "endif" @FlamasterKeyword)
 
 ; include paths
 (include_directive
